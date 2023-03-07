@@ -1,7 +1,3 @@
 @import url(./styles/login.page.css);
 @import url(./styles/not-found.page.css);
 
-h1 {
-  color: hotpink;
-  font-family: cursive;
-}

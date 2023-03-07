@@ -28,7 +28,6 @@ export const Login = () => {
             <input name="salvar" id="nao-salvar" type="radio" value="false" />
         </div>
         <button id="btn-entrar">Entrar</button>
-        <a href="/#404">ERRO</a>
 
     `
 

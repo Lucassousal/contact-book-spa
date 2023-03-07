@@ -38,7 +38,10 @@ const events = () => {
 
 export const NotFound = () => {
     notFound.innerHTML = `
-        <p>Você será redirecionado <em>${secondsToRedirect}</em></p>
+        <img src="https://static.vecteezy.com/system/resources/previews/003/067/848/original/cartoon-sad-smile-face-emoticon-icon-in-flat-style-free-vector.jpg">
+        <h1>404</h1>
+        <p>Essa página não existe</p>
+        <span>Você será redirecionado automaticamente em: <em>${secondsToRedirect}</em></span>
         <a href="/#login">Voltar ao início</a>
     `
 

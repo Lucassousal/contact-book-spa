@@ -1,5 +1,38 @@
+#p-not-found{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#p-not-found img{
+  width: 250px;
+}
+
+#p-not-found h1{
+  font-size: 5rem;
+  margin: 10px 0;
+}
+
 #p-not-found p {
-  font-size: 1rem;
-  font-style: italic;
-  color: blueviolet;
+  font-size: 1.2rem;
+}
+#p-not-found span {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+#p-not-found a{
+  display: block;
+  margin-top: 15px;
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 20px;
+  background-color: #000;
+  border-radius: 5px;
+}
+
+#p-not-found a:hover{
+  transform: translateY(-2px);
+  opacity: 0.9;
 }
