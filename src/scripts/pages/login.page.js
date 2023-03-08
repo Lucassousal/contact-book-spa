@@ -32,12 +32,8 @@ export const Login = () => {
         <label for="password">Senha</label>
         <input id="password" name="senha" type="password" />
         <div class="input-label-container">
-            <label for="salvar">Salvar</label>
-            <input name="salvar" id="salvar" type="radio" value="true" />
-            <!--
-            <label for="nao-salvar">Não salvar</label>
-            <input name="salvar" id="nao-salvar" type="radio" value="false" />
-            -->
+            <label for="salvar">Salvar:</label>
+            <input name="salvar" id="salvar" type="checkbox" value="true" />
         </div>
         <button type="submit" id="btn-entrar">Entrar</button>
     `;

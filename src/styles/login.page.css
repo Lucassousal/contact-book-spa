@@ -9,12 +9,12 @@
   border-radius: 15px;
 }
 
-#p-login input[type="radio"] {
+#p-login input[type="checkbox"] {
   margin-left: 2px;
   margin-right: 30px;
 }
 
-#p-login input:not(input[type="radio"]){
+#p-login input:not(input[type="checkbox"]) {
   display: block;
   width: 100%;
   box-sizing: border-box;
@@ -24,30 +24,33 @@
   border: 1px solid #333;
 }
 
-#p-login input:not(input[type="radio"]):focus{
+#p-login input:not(input[type="checkbox"]):focus {
   outline-color: #333;
 }
 
-#p-login .input-label-container{
+#p-login .input-label-container {
   display: flex;
   align-items: center;
+  gap: 0.5rem;
 }
 
-#p-login button{
+#p-login button {
   display: flex;
   justify-content: center;
   padding: 6px 14px;
   border-radius: 6px;
   border: none;
-  background: #6E6D70;
-  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), inset 0px 0.5px 0.5px rgba(255, 255, 255, 0.5), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.12);
-  color: #DFDEDF;
+  background: #6e6d70;
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1),
+    inset 0px 0.5px 0.5px rgba(255, 255, 255, 0.5),
+    0px 0px 0px 0.5px rgba(0, 0, 0, 0.12);
+  color: #dfdedf;
   cursor: pointer;
   margin: 15px 0;
   transition: all ease-in-out 0.1s;
 }
 
-#p-login button:hover{
+#p-login button:hover {
   transform: translateY(-2px);
   opacity: 0.9;
 }
