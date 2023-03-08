@@ -1,8 +1,11 @@
 import { AuthServices } from "../../services/auth.service";
 
 const login = document.createElement("form");
-
 login.setAttribute("id", "p-login");
+
+const signUpBtn = document.createElement("button");
+signUpBtn.setAttribute("type", "button");
+signUpBtn.setAttribute("id", "btn-cadastrar");
 
 const events = () => {
   login.addEventListener("submit", async (e) => {
@@ -14,6 +17,10 @@ const events = () => {
     await AuthServices.login(dados);
 
     console.log(dados);
+  });
+
+  signUpBtn.addEventListener("click", () => {
+    window.location.replace("#createUser");
   });
 };
 
@@ -32,9 +39,11 @@ export const Login = () => {
             <input name="salvar" id="nao-salvar" type="radio" value="false" />
             -->
         </div>
-        <button id="btn-entrar">Entrar</button>
-        <button id="btn-cadastrar">Cadastrar</button>
+        <button type="submit" id="btn-entrar">Entrar</button>
     `;
+
+  signUpBtn.innerText = "Cadastrar";
+  login.appendChild(signUpBtn);
 
   events();
   return login;
