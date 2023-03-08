@@ -1,0 +1,68 @@
+body {
+  background-color: #eaeaeb;
+  display: flex;
+  justify-content: center;
+}
+
+#p-sign-up h1 {
+  font-size: 40px;
+  color: #55575a;
+  text-align: center;
+  margin-top: 2em;
+}
+
+#p-sign-up .signup-container {
+  background-color: #37547d;
+  width: 510px;
+  height: 523px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#p-sign-up p {
+  font-size: 20px;
+  line-height: 30px;
+  color: #e9e6e6;
+  text-align: center;
+  margin-top: 2em;
+}
+
+#p-sign-up .container label {
+  float: left;
+}
+
+#p-sign-up label {
+  font-size: 18px;
+  line-height: 27px;
+  color: #e9e6e6;
+}
+
+#p-sign-up input {
+  box-sizing: border-box;
+  padding: 10px;
+  background: #e9e6e6;
+  border-radius: 16px;
+  border: none;
+  height: 44px;
+  width: 433px;
+  outline: none;
+}
+
+#p-sign-up button {
+  background-color: #5b5e63;
+  color: #e9e6e6;
+  font-size: 20px;
+  border: none;
+  width: 222px;
+  height: 41px;
+  border-radius: 16px;
+  margin-top: 2em;
+}
+
+#p-sign-up button:hover {
+  color: #5b5e63;
+  background-color: #e9e6e6;
+  transition: 0.5s;
+}
