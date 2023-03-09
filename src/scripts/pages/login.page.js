@@ -27,12 +27,9 @@ const events = () => {
 export const Login = () => {
   login.innerHTML = `
         <h1>CONTACT LIST</h1>
-        <p>Login</p>
-        <label for="username">Usuário:</label>
-        <input id="username" name="email" type="text" />
-
-        <label for="password">Senha:</label>
-        <input id="password" name="senha" type="password" />
+        <p>Login to get started</p>
+        <input id="username" name="email" type="text" placeholder='user'/>
+        <input id="password" name="senha" type="password" placeholder='password'/>
         <div class="input-label-container">
             <label for="salvar">Salvar:</label>
             <input name="salvar" id="salvar" type="checkbox" value="true" />
