@@ -7,15 +7,13 @@ const home = document.createElement('div')
 home.setAttribute('id', 'p-home')
 
 const appContainer = document.createElement('div')
-appContainer.setAttribute('id','app-container')
+appContainer.setAttribute('id', 'app-container')
 
 const appContainerLeft = document.createElement('div')
-appContainerLeft.setAttribute('id','app-container-left')
+appContainerLeft.setAttribute('id', 'app-container-left')
 
 const appContainerRight = document.createElement('div')
-appContainerRight.setAttribute('id','app-container-right')
-
-
+appContainerRight.setAttribute('id', 'app-container-right')
 
 // const events = () => {
 //   setTimeout(()=>{
@@ -23,6 +21,7 @@ appContainerRight.setAttribute('id','app-container-right')
 //     })
 //   },1000)
 // }
+
 
 
 export const Home = () => {
