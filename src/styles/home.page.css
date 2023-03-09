@@ -8,6 +8,22 @@
 
 
 
+/* CONTAINERS */
+#app-container{
+  display: flex;
+  gap: 22px;
+}
+#app-container-left{
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+#app-container-right  {
+  width: 100%;
+}
+
+
+
 /* Elemento nav */
 
 #e-nav{
@@ -33,23 +49,13 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-}
-#e-nav .close-button span{
   font-size: 27px;
+  color: #494949;
+  transition: all ease-in-out 0.2s;
 }
-
-/* CONTAINERS */
-#app-container{
-  display: flex;
-  gap: 22px;
-}
-#app-container-left{
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-}
-#app-container-right  {
-  width: 100%;
+#e-nav .close-button:hover{
+  background-color: #800E03;
+  color: #fff;
 }
 
 
@@ -91,6 +97,12 @@
   border: none;
   cursor: pointer;
 }
+#e-user-data #edit-profile-button:hover{
+  color: #5b5e63;
+  background-color: #e9e6e6;
+  transition: 0.5s;
+}
+
 #e-user-data .end-user-data{
   display: flex;
   flex-direction: column;
@@ -124,8 +136,11 @@
   letter-spacing: 0em;
   text-align: right;
   color: #800E03;
+  transition: all ease-in-out 0.2s;
 }
-
+#e-user-data #delete-account-button:hover{
+  color: #fff;
+}
 
 
 
@@ -197,8 +212,8 @@
 }
 
 
-/* LISTA DE CONTATO */
 
+/* LISTA DE CONTATO */
 
 #e-contact-list{
   background-color: #CDD7D6;
@@ -228,15 +243,16 @@
 }
 
 #e-contact-list li{
-  height: 64px;
-  width: 855px;
-  background: #E9E6E6;
-  padding: 14px 26px;
-  margin-top: 8px;
-  display: flex;
+  display: inline-flex;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
+  height: 64px;
+  width: 100%;
+  background: #E9E6E6;
+  padding: 14px 26px;
+  margin-top: 8px;
+  
 }
 #e-contact-list .photo-contact{
   height: 37px;
@@ -260,6 +276,10 @@
   line-height: 21px;
   color: #494949;
   cursor: pointer;
+  transition: all ease-in-out 0.2s;
+}
+#e-contact-list .edit-contact:hover{
+  color: #fcb8b1;
 }
 #e-contact-list .delete-contact{
   height: 24px;
@@ -272,5 +292,11 @@
   color: #E9E6E6;
   font-size: 12px;
   cursor: pointer;
+  border: 1px solid #4F0A03;
+  transition: all ease-in-out 0.2s;
 }
-
+#e-contact-list .delete-contact:hover{
+  background-color: #E9E6E6;
+  color: #4F0A03;
+  font-weight: 600;
+}

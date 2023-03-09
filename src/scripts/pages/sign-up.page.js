@@ -9,6 +9,9 @@ const events = () => {
     const data = Object.fromEntries(fd)
 
     console.log(data)
+
+    window.location.href="/#login"
+
   })
 }
 

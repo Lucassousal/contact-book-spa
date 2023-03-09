@@ -12,13 +12,13 @@ body{
   font-size: 40px;
   color: #55575a;
   text-align: center;
-  margin-top: 2em;
+  margin-top: 1em;
 }
 
 #p-sign-up .signup-container {
   background-color: #37547d;
   width: 510px;
-  height: 523px;
+  height: 500px;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
