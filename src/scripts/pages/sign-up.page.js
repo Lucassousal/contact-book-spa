@@ -10,8 +10,7 @@ const events = () => {
 
     console.log(data)
 
-    window.location.href="/#login"
-
+    window.location.href = '/#login'
   })
 }
 
@@ -43,6 +42,7 @@ export const CreateUser = () => {
     </div>
 
     <button id="btn-signup">Cadastrar</button>
+    <p class="toLogin">Já tem uma conta? <a href="/#login">Entre agora</a></p>
     </div>
     `
 

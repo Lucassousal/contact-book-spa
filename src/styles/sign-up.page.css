@@ -1,4 +1,4 @@
-body{
+body {
   background-color: #eaeaeb;
 }
 #p-sign-up {
@@ -70,4 +70,13 @@ body{
   color: #5b5e63;
   background-color: #e9e6e6;
   transition: 0.5s;
+}
+
+#p-sign-up .toLogin {
+  margin-top: 0.5em;
+  font-size: 14px;
+}
+
+#p-sign-up .toLogin a {
+  color: #b1aeae;
 }
