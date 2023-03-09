@@ -54,6 +54,15 @@ body {
   outline: none;
 }
 
+#p-sign-up .output {
+  height: 30px;
+}
+
+#p-sign-up .message {
+  color: #b3da93;
+  box-sizing: border-box;
+}
+
 #p-sign-up button {
   background-color: #5b5e63;
   color: #e9e6e6;
@@ -62,7 +71,7 @@ body {
   width: 222px;
   height: 41px;
   border-radius: 16px;
-  margin-top: 2em;
+  margin-top: 1em;
   cursor: pointer;
 }
 
