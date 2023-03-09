@@ -1,3 +1,5 @@
+import { UserPost } from '../../services/user.service'
+
 const createUser = document.createElement('form')
 createUser.setAttribute('id', 'p-sign-up')
 
@@ -8,10 +10,20 @@ const events = () => {
     const fd = new FormData(createUser)
     const data = Object.fromEntries(fd)
 
-    console.log(data)
-
-    window.location.href="/#login"
-
+    UserPost(data)
+      .then(res => {
+        const message = createUser.querySelector('.message')
+        if (res.status === 200) {
+          window.location.href = '/#login'
+        }
+        if (res.status === 409) {
+          message.innerHTML = res.mensagem
+          createUser.reset()
+        }
+      })
+      .catch(err => {
+        console.log(err)
+      })
   })
 }
 
@@ -24,7 +36,7 @@ export const CreateUser = () => {
 
     <div class='container'>
     <label for="name">Nome:</label><br>
-    <input id="name" name="name" type="text" autofocus />
+    <input id="nome" name="nome" type="text" autofocus />
     </div>
 
     <div class='container'>
@@ -34,15 +46,18 @@ export const CreateUser = () => {
 
     <div class='container'>
     <label for="password">Senha:</label><br>
-    <input id="password" name="password" type="password" />
+    <input id="senha" name="senha" type="password" />
     </div>
 
     <div class='container'>
     <label for="Photo">Adicione uma imagem:</label><br>
-    <input id="photo" name="photo" type="file" />
+    <input id="foto" name="foto" type="file" />
     </div>
 
+    <div class="output"><span class="message"></span></div>
+
     <button id="btn-signup">Cadastrar</button>
+    <p class="toLogin">Já tem uma conta? <a href="/#login">Entre agora</a></p>
     </div>
     `
 
