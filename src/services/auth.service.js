@@ -1,30 +1,15 @@
-import * as dotenv from "dotenv";
-dotenv.config();
+import appSettings from '../../appSettings'
+const url = `${appSettings.baseURL}/auth`
 
-const api = process.env.API_URL;
+const headers = new Headers()
+headers.append('Content-Type', 'application/json')
 
-const REQUEST_CONFIG = {
-  method: "",
-  headers: { "Content-Type": "application/json" },
-  body: null,
-};
-
-export const AuthServices = {
-  async login(formData) {
-    try {
-      const loginRequestConfig = Object.assign(REQUEST_CONFIG);
-      loginRequestConfig.method = "POST";
-      loginRequestConfig.body = JSON.stringify(formData);
-
-      const response = await fetch(`${api}/auth`, loginRequestConfig);
-
-      console.log("response:", await response.json());
-    } catch (error) {
-      console.log("error:", error);
-    }
-  },
-
-  async signUp() {},
-
-  async forgotPassword() {},
-};
+export const enterHome = async data => {
+  const options = {
+    headers,
+    body: JSON.stringify(data),
+    method: 'POST',
+  }
+  const res = await fetch(url, options)
+  return await res.json()
+}

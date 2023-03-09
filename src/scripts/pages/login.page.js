@@ -1,28 +1,41 @@
-import { AuthServices } from "../../services/auth.service";
+import { AuthServices, enterHome } from '../../services/auth.service'
 
-const login = document.createElement("form");
-login.setAttribute("id", "p-login");
+const login = document.createElement('form')
+login.setAttribute('id', 'p-login')
 
-const signUpBtn = document.createElement("button");
-signUpBtn.setAttribute("type", "button");
-signUpBtn.setAttribute("id", "btn-cadastrar");
+const signUpBtn = document.createElement('button')
+signUpBtn.setAttribute('type', 'button')
+signUpBtn.setAttribute('id', 'btn-cadastrar')
 
 const events = () => {
-  login.addEventListener("submit", async (e) => {
-    e.preventDefault();
+  login.addEventListener('submit', async e => {
+    e.preventDefault()
 
-    const fd = new FormData(login);
-    const dados = Object.fromEntries(fd);
+    const fd = new FormData(login)
+    const data = Object.fromEntries(fd)
+    const message = login.querySelector('.message')
 
-    await AuthServices.login(dados);
+    enterHome(data)
+      .then(res => {
+        if (res.status === 200) {
+          sessionStorage.setItem('@user', JSON.stringify(res.data))
+          localStorage.setItem('@token', res.data.token)
+          window.location.href = '/#home'
+        }
+        if (res.status === 401) {
+          message.innerHTML = `${res.mensagem}`
+          login.reset()
+        }
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  })
 
-    console.log(dados);
-  });
-
-  signUpBtn.addEventListener("click", () => {
-    window.location.replace("#createUser");
-  });
-};
+  signUpBtn.addEventListener('click', () => {
+    window.location.replace('#createUser')
+  })
+}
 
 export const Login = () => {
   login.innerHTML = `
@@ -34,12 +47,15 @@ export const Login = () => {
             <label for="salvar">Salvar:</label>
             <input name="salvar" id="salvar" type="checkbox" value="true" />
         </div>
+        <div class="container-message">
+          <p class='message'></p>
+        </div>
         <button type="submit" id="btn-entrar">Entrar</button>
-    `;
+    `
 
-  signUpBtn.innerText = "Cadastrar";
-  login.appendChild(signUpBtn);
+  signUpBtn.innerText = 'Cadastrar'
+  login.appendChild(signUpBtn)
 
-  events();
-  return login;
-};
+  events()
+  return login
+}
