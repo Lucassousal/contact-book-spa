@@ -7,18 +7,24 @@ function redirectPage() {
   const root = document.querySelector('#root')
 
   const Router = {
-    '': { component: Login, path: '#login' },
-    '#login': { component: Login, path: '#login' },
-    '#404': { component: NotFound, path: '#404' },
-    '#createUser': { component: CreateUser, path: '#createUser' },
-    '#home': { component: Home, path: '#home' },
+    '': { component: Login, path: '#login', private: false },
+    '#login': { component: Login, path: '#login', private: false },
+    '#404': { component: NotFound, path: '#404', private: false },
+    '#createUser': {
+      component: CreateUser,
+      path: '#createUser',
+      private: false,
+    },
+    '#home': { component: Home, path: '#home', private: true },
   }
 
-  let route = Router[window.location.hash]
+  const route = Router[window.location.hash] || Router['#404']
 
-  if (!route) {
-    route = Router['#404']
-    window.location.href = route.path
+  if (route.private) {
+    const token = localStorage.getItem('@token')
+    if (!token) {
+      window.location.href = '/#login'
+    }
   }
 
   root.innerHTML = null
