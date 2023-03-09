@@ -2,6 +2,7 @@
 @import url(./styles/login.page.css);
 @import url(./styles/not-found.page.css);
 @import url(./styles//sign-up.page.css);
+@import url(./styles/home.page.css);
 
 html * {
   font-family: 'Poppins', sans-serif;

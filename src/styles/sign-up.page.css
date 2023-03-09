@@ -1,7 +1,11 @@
-body {
+body{
   background-color: #eaeaeb;
+}
+#p-sign-up {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 #p-sign-up h1 {
@@ -59,6 +63,7 @@ body {
   height: 41px;
   border-radius: 16px;
   margin-top: 2em;
+  cursor: pointer;
 }
 
 #p-sign-up button:hover {
