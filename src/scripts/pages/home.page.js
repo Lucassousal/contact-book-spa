@@ -2,15 +2,13 @@ const home = document.createElement('div')
 home.setAttribute('id', 'p-home')
 
 const appContainer = document.createElement('div')
-appContainer.setAttribute('id','app-container')
+appContainer.setAttribute('id', 'app-container')
 
 const appContainerLeft = document.createElement('div')
-appContainerLeft.setAttribute('id','app-container-left')
+appContainerLeft.setAttribute('id', 'app-container-left')
 
 const appContainerRight = document.createElement('div')
-appContainerRight.setAttribute('id','app-container-right')
-
-
+appContainerRight.setAttribute('id', 'app-container-right')
 
 // const events = () => {
 //   home.addEventListener('submit', e => {
@@ -23,11 +21,10 @@ appContainerRight.setAttribute('id','app-container-right')
 //   })
 // }
 
-
 const navBarElement = () => {
   const navbar = document.createElement('nav')
   navbar.setAttribute('id', 'e-nav')
-  
+
   navbar.innerHTML = `
     <div class="nav-container">
       <span class="welcome-text">
@@ -37,7 +34,7 @@ const navBarElement = () => {
         <span>&#10005;</span>
       </div>
     </div>
-    ` 
+    `
   return navbar
 }
 
@@ -53,9 +50,9 @@ const userDataElement = () => {
     <div class="end-user-data">
       <p id="use-name">fulano beltrano</p>
       <p id="user-e-mail">fulano beltrano</p>
-      <a id="delete-account-button" href="">Detele account</a>
+      <a id="delete-account-button" href="">Deletar conta</a>
     </div>
-    ` 
+    `
   return userData
 }
 
@@ -68,12 +65,12 @@ const postContact = () => {
       <p>Novo Contato</p>
 
       <div class='container'>
-        <label for="name">Name:</label><br>
+        <label for="name">Nome:</label><br>
         <input id="name" name="name" type="text" autofocus />
       </div>
 
       <div class='container'>
-        <label for="phone">Phone number:</label><br>
+        <label for="phone">Telefone:</label><br>
         <input id="phone" name="phone" type="tel" />
       </div>
 
@@ -84,13 +81,13 @@ const postContact = () => {
 
 
       <div class='container'>
-        <label for="Photo">Photo:</label><br>
+        <label for="Photo">Adicione uma imagem:</label><br>
         <input id="photo" name="photo" type="file" />
       </div>
 
       <button id="btn-signup">Salvar</button>
     </div>
-    ` 
+    `
   return postContact
 }
 
@@ -118,23 +115,20 @@ const contactList = () => {
           <div class="delete-contact">&#10005;</div>
         </li>
       </ul>
-    ` 
+    `
   return contactList
 }
 
-
 export const Home = () => {
-  
-  home.innerHTML=""
-  
+  home.innerHTML = ''
+
   appContainerLeft.appendChild(userDataElement())
   appContainerLeft.appendChild(postContact())
   appContainerRight.appendChild(contactList())
   appContainer.appendChild(appContainerLeft)
   appContainer.appendChild(appContainerRight)
-  home.appendChild(navBarElement()) 
+  home.appendChild(navBarElement())
   home.appendChild(appContainer)
-
 
   // events()
   return home

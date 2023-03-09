@@ -17,10 +17,10 @@ export const CreateUser = () => {
 
     <h1>CONTACT LIST</h1>
     <div class='signup-container'>
-    <p>Create Account</p>
+    <p>Crie a sua conta</p>
 
     <div class='container'>
-    <label for="name">Name:</label><br>
+    <label for="name">Nome:</label><br>
     <input id="name" name="name" type="text" autofocus />
     </div>
 
@@ -30,16 +30,16 @@ export const CreateUser = () => {
     </div>
 
     <div class='container'>
-    <label for="password">Password:</label><br>
+    <label for="password">Senha:</label><br>
     <input id="password" name="password" type="password" />
     </div>
 
     <div class='container'>
-    <label for="Photo">Photo:</label><br>
+    <label for="Photo">Adicione uma imagem:</label><br>
     <input id="photo" name="photo" type="file" />
     </div>
 
-    <button id="btn-signup">sign up</button>
+    <button id="btn-signup">Cadastrar</button>
     </div>
     `
 
