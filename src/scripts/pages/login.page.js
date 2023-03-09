@@ -26,10 +26,12 @@ const events = () => {
 
 export const Login = () => {
   login.innerHTML = `
-        <label for="username">Usuário</label>
+        <h1>CONTACT LIST</h1>
+        <p>Login</p>
+        <label for="username">Usuário:</label>
         <input id="username" name="email" type="text" />
 
-        <label for="password">Senha</label>
+        <label for="password">Senha:</label>
         <input id="password" name="senha" type="password" />
         <div class="input-label-container">
             <label for="salvar">Salvar:</label>

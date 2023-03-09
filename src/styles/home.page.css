@@ -1,0 +1,276 @@
+#root{
+  width: 100%;
+}
+#p-home{
+  max-width: 1240px;
+  margin: auto;
+}
+
+
+
+/* Elemento nav */
+
+#e-nav{
+  height: 106px;
+}
+#e-nav .nav-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#e-nav .welcome-text{
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+
+}
+#e-nav .close-button{
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #D9D9D9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#e-nav .close-button span{
+  font-size: 27px;
+}
+
+/* CONTAINERS */
+#app-container{
+  display: flex;
+  gap: 22px;
+}
+#app-container-left{
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+#app-container-right  {
+  width: 100%;
+}
+
+
+
+/* Elemento UserData */
+
+#e-user-data {
+  height: 191px;
+  width: 333px;
+  border-radius: 16px;
+  padding: 25px 26px ;
+  background-color: #FCB8B1;
+  box-sizing: border-box;
+}
+
+#e-user-data .top-user-data{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50%;
+}
+#e-user-data #photo-user{
+  /* background-image: url(''); */
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+#e-user-data #edit-profile-button{
+  height: 33px;
+  width: 145px;
+  border-radius: 16px;
+  background-color: #5B5E63;
+  border-radius: 16px;
+  color: #E9E6E6;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  border: none;
+  cursor: pointer;
+}
+#e-user-data .end-user-data{
+  display: flex;
+  flex-direction: column;
+}
+#e-user-data #use-name{
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #494949;
+  margin: 0;
+  margin-bottom: 7px;
+
+}
+#e-user-data #user-e-mail{
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #494949;
+  margin: 0;
+  margin-bottom: 7px;
+}
+#e-user-data #delete-account-button{
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: right;
+  color: #800E03;
+}
+
+
+
+
+/* Elemento Form Post Contact */
+
+#e-post-contact .signup-container {
+  background-color: #37547d;
+  height: 423px;
+  width: 333px;
+  border-radius: 16px;  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:35px 22px;
+  box-sizing: border-box;
+}
+
+#e-post-contact p {
+  font-size: 20px;
+  line-height: 30px;
+  color: #e9e6e6;
+  text-align: center;
+  font-weight: 400;
+  margin:0;
+}
+
+#e-post-contact .container label {
+  float: left;
+}
+
+#e-post-contact label {
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #e9e6e6;
+  margin-top: 9px;
+}
+
+#e-post-contact input {
+  box-sizing: border-box;
+  padding: 10px;
+  background: #e9e6e6;
+  border-radius: 16px;
+  border: none;
+  outline: none;
+  height: 36px;
+  width: 283px;
+}
+
+#e-post-contact button {
+  background-color: #5b5e63;
+  color: #e9e6e6;
+  font-size: 20px;
+  border: none;
+  width: 222px;
+  height: 41px;
+  border-radius: 16px;
+  margin-top: 2em;
+  cursor: pointer;
+}
+
+#e-post-contact button:hover {
+  color: #5b5e63;
+  background-color: #e9e6e6;
+  transition: 0.5s;
+}
+
+
+/* LISTA DE CONTATO */
+
+
+#e-contact-list{
+  background-color: #CDD7D6;
+  border-radius: 16px;
+  width: 100%;
+  height: 100%;
+  padding: 34px 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+#e-contact-list #search-contact{
+  width: 562px;
+  height: 33px;
+  background: #E9E6E6;
+  border-radius: 16px;
+  border: none;
+  padding: 0 23px;
+}
+#e-contact-list ul{
+  margin: 0;
+  padding: 0;
+  margin-top: 35px;
+  list-style: none;
+}
+
+#e-contact-list li{
+  height: 64px;
+  width: 855px;
+  background: #E9E6E6;
+  padding: 14px 26px;
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+#e-contact-list .photo-contact{
+  height: 37px;
+  width: 37px;
+  /* background: url(image.png); */
+  background-color: #fff;
+  border-radius: 50%;
+}
+#e-contact-list .name-contact,#e-contact-list .email-contact,#e-contact-list .phone-number-contact{
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #494949;
+}
+#e-contact-list .edit-contact{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #494949;
+  cursor: pointer;
+}
+#e-contact-list .delete-contact{
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background-color: #4F0A03;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #E9E6E6;
+  font-size: 12px;
+  cursor: pointer;
+}
+
