@@ -8,7 +8,7 @@ export const contactList = () => {
   contactList.innerHTML = `
       <input type="search" name="search-contact" id="search-contact" placeholder="search...">
       <ul id="list-contact">
-        <li>
+        <!-- <li>
           <div class="photo-contact"></div>
           <span class="name-contact">beltrano filho</span>
           <span class="email-contact">beltranof@gmail.com</span>
@@ -23,7 +23,7 @@ export const contactList = () => {
           <span class="phone-number-contact">(85) 98520-0352</span>
           <a class="edit-contact">edit</a>
           <div class="delete-contact">&#10005;</div>
-        </li>
+        </li> -->
       </ul>
     ` 
   return contactList

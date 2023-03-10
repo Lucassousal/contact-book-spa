@@ -27,7 +27,6 @@ appContainerRight.setAttribute('id', 'app-container-right')
 export const Home = () => {
   
   if(home.innerHTML == ""){
-       
     appContainerLeft.appendChild(userDataElement())
     appContainerLeft.appendChild(postContact())
     appContainerRight.appendChild(contactList())
@@ -35,9 +34,9 @@ export const Home = () => {
     appContainer.appendChild(appContainerRight)
     home.appendChild(navBarElement()) 
     home.appendChild(appContainer)
-  
   }
 
+  
   // events()
   return home
 }
